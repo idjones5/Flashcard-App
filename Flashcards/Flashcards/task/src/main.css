@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-image: url("https://images.unsplash.com/photo-1585075799530-99cafc639dfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3132&q=80");
+}
+
+h1 {
+    text-align: center;
+    font-family: Poppins, sans-serif;
+    font-size: 50px;
+    color: #312f2f;
+}
+
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff7f9;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: #223654;
+    font-family: Poppins, sans-serif;
+    flex: 0 0;
+    font-weight: bold;
+    font-size: 30px;
+    height: 300px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    position: absolute;
+    text-align: center;
+    transition: transform 1s ease;
+    width: 300px;
+}
+
+#quiz-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 1000px;
+}
+
+.individual-card-container {
+    transition: transform 1s ease;
+    position: relative;
+    background-color: #e88e6d;
+    border-radius:10px;
+    display: flex;
+    height: 300px;
+    width: 300px;
+    margin: 5px;
+    perspective: 1000px;
+}
+
+.individual-card-container:hover {
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+}
+.back {
+    transform: rotateY(180deg);
+}
+
+.back:hover {
+    z-index: 2;
+}
+
+.front {
+    z-index: 2;
+}
+.front:hover {
+    z-index: 1;
+    backface-visibility: hidden;
+}
